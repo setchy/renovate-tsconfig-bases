@@ -5,13 +5,7 @@
         ":separateMultipleMajorReleases"
     ],
     "packageRules": [
-        {
-            "groupName": "@tsconfig base updates",
-            "enabled": true,
-            "matchPackageNames": [
-                "/^@tsconfig/node\\d+$/"
-            ]
-        },
+        
         {
             "matchPackageNames": [
                 "@tsconfig/node20"
