@@ -1,0 +1,18 @@
+{
+    "packageRules": [
+      {
+        "matchPackagePatterns": ["^@tsconfig/node\\d+$"],
+        "groupName": "@tsconfig base updates"
+      }
+    ],
+    "regexManagers": [
+      {
+        "fileMatch": ["^tsconfig\\.json$"],
+        "matchStrings": [
+          "\"extends\":\\s*\"(?<depName>@tsconfig/node\\d+)\""
+        ],
+        "depNameTemplate": "{{{depName}}}"
+      }
+    ]
+  }
+  
