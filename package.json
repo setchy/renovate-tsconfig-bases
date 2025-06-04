@@ -11,6 +11,6 @@
   "license": "ISC",
   "packageManager": "pnpm@10.11.1",
   "dependencies": {
-    "@tsconfig/node20": "20.1.5"
+    "@tsconfig/node21": "21.0.0"
   }
 }
