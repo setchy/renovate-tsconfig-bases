@@ -1,41 +1,57 @@
 {
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended",
+        ":separateMultipleMajorReleases"
+    ],
     "packageRules": [
-    {
-      "matchPackagePatterns": ["^@tsconfig/node\\d+$"],
-      "groupName": "@tsconfig base updates",
-      "enabled": true
-    },
-    {
-        "matchPackageNames": ["@tsconfig/node20"],
-        "replacementName": "@tsconfig/node21",
-        "replacementVersion": "21.0.0"
-      },
-      {
-        "matchPackageNames": ["@tsconfig/node21"],
-        "replacementName": "@tsconfig/node22",
-        "replacementVersion": "22.0.0"
-      },
-      {
-        "matchPackageNames": ["@tsconfig/node22"],
-        "replacementName": "@tsconfig/node23",
-        "replacementVersion": "23.0.0"
-      },
-      {
-        "matchPackageNames": ["@tsconfig/node23"],
-        "replacementName": "@tsconfig/node24",
-        "replacementVersion": "24.0.0"
-      }
-  ],
+        {
+            "matchPackagePatterns": [
+                "^@tsconfig/node\\d+$"
+            ],
+            "groupName": "@tsconfig base updates",
+            "enabled": true
+        },
+        {
+            "matchPackageNames": [
+                "@tsconfig/node20"
+            ],
+            "replacementName": "@tsconfig/node21",
+            "replacementVersion": "21.0.0"
+        },
+        {
+            "matchPackageNames": [
+                "@tsconfig/node21"
+            ],
+            "replacementName": "@tsconfig/node22",
+            "replacementVersion": "22.0.0"
+        },
+        {
+            "matchPackageNames": [
+                "@tsconfig/node22"
+            ],
+            "replacementName": "@tsconfig/node23",
+            "replacementVersion": "23.0.0"
+        },
+        {
+            "matchPackageNames": [
+                "@tsconfig/node23"
+            ],
+            "replacementName": "@tsconfig/node24",
+            "replacementVersion": "24.0.0"
+        }
+    ],
     "customManagers": [
-      {
-        "customType": "regex",
-        "fileMatch": ["^tsconfig\\.json$"],
-        "matchStrings": [
-          "\"extends\":\\s*\"(?<depName>@tsconfig/node\\d+)\""
-        ],
-        "depNameTemplate": "{{{depName}}}",
-        "datasourceTemplate": "npm"
-      }
+        {
+            "customType": "regex",
+            "fileMatch": [
+                "^tsconfig\\.json$"
+            ],
+            "matchStrings": [
+                "\"extends\":\\s*\"(?<depName>@tsconfig/node\\d+)\""
+            ],
+            "depNameTemplate": "{{{depName}}}",
+            "datasourceTemplate": "npm"
+        }
     ]
-  }
-  
+}
