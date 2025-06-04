@@ -44,6 +44,7 @@
             "matchStrings": [
                 "\"extends\":\\s*\"(?<depName>@tsconfig/node(?<major>\\d+))/tsconfig\\.json\""
             ],
+            "autoReplaceStringTemplate": "\"extends\": \"@tsconfig/node{{{major}}}/tsconfig.json\"",
             "depNameTemplate": "{{{depName}}}",
             "currentValueTemplate": "{{{major}}}.\\d.\\d",
             "datasourceTemplate": "npm"
