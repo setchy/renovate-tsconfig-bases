@@ -1,10 +1,27 @@
 {
     "packageRules": [
+    {
+      "matchPackagePatterns": ["^@tsconfig/node\\d+$"],
+      "groupName": "@tsconfig base updates",
+      "enabled": true
+    },
+    {
+        "matchPackageNames": ["@tsconfig/node20"],
+        "replacementPackage": "@tsconfig/node21"
+      },
       {
-        "matchPackagePatterns": ["^@tsconfig/node\\d+$"],
-        "groupName": "@tsconfig base updates"
+        "matchPackageNames": ["@tsconfig/node21"],
+        "replacementPackage": "@tsconfig/node22"
+      },
+      {
+        "matchPackageNames": ["@tsconfig/node22"],
+        "replacementPackage": "@tsconfig/node23"
+      },
+      {
+        "matchPackageNames": ["@tsconfig/node23"],
+        "replacementPackage": "@tsconfig/node24"
       }
-    ],
+  ],
     "regexManagers": [
       {
         "fileMatch": ["^tsconfig\\.json$"],
@@ -13,6 +30,7 @@
         ],
         "depNameTemplate": "{{{depName}}}"
       }
-    ]
+    ],
+    
   }
   
