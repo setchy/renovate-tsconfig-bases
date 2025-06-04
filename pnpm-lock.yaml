@@ -8,15 +8,15 @@ importers:
 
   .:
     dependencies:
-      '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+      '@tsconfig/node21':
+        specifier: 21.0.0
+        version: 21.0.0
 
 packages:
 
-  '@tsconfig/node20@20.1.5':
-    resolution: {integrity: sha512-Vm8e3WxDTqMGPU4GATF9keQAIy1Drd7bPwlgzKJnZtoOsTm1tduUTbDjg0W5qERvGuxPI2h9RbMufH0YdfBylA==}
+  '@tsconfig/node21@21.0.0':
+    resolution: {integrity: sha512-fMySImjI1muKEV1JAFZfBlgSjLE8EeqNRmdcdyUWDenXyCvWjSE1oGM/nK6ob1fV+lAYlJhhC1b2nrjnDQCOhQ==}
 
 snapshots:
 
-  '@tsconfig/node20@20.1.5': {}
+  '@tsconfig/node21@21.0.0': {}
