@@ -40,18 +40,5 @@
             "replacementName": "@tsconfig/node24",
             "replacementVersion": "24.0.0"
         }
-    ],
-    "customManagers": [
-        {
-            "customType": "regex",
-            "fileMatch": [
-                "^tsconfig\\.json$"
-            ],
-            "matchStrings": [
-                "\"extends\":\\s*\"(?<depName>@tsconfig/node\\d+)\""
-            ],
-            "depNameTemplate": "{{{depName}}}",
-            "datasourceTemplate": "npm"
-        }
-    ]
+    ] 
 }
