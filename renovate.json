@@ -7,19 +7,23 @@
     },
     {
         "matchPackageNames": ["@tsconfig/node20"],
-        "replacementPackage": "@tsconfig/node21"
+        "replacementName": "@tsconfig/node21",
+        "replacementVersion": "21.0.0"
       },
       {
         "matchPackageNames": ["@tsconfig/node21"],
-        "replacementPackage": "@tsconfig/node22"
+        "replacementName": "@tsconfig/node22",
+        "replacementVersion": "22.0.0"
       },
       {
         "matchPackageNames": ["@tsconfig/node22"],
-        "replacementPackage": "@tsconfig/node23"
+        "replacementName": "@tsconfig/node23",
+        "replacementVersion": "23.0.0"
       },
       {
         "matchPackageNames": ["@tsconfig/node23"],
-        "replacementPackage": "@tsconfig/node24"
+        "replacementName": "@tsconfig/node24",
+        "replacementVersion": "24.0.0"
       }
   ],
     "customManagers": [
