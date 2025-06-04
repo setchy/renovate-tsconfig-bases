@@ -6,11 +6,11 @@
     ],
     "packageRules": [
         {
-            "matchPackagePatterns": [
-                "^@tsconfig/node\\d+$"
-            ],
             "groupName": "@tsconfig base updates",
-            "enabled": true
+            "enabled": true,
+            "matchPackageNames": [
+                "/^@tsconfig/node\\d+$/"
+            ]
         },
         {
             "matchPackageNames": [
@@ -44,7 +44,9 @@
     "customManagers": [
         {
             "customType": "regex",
-            "fileMatch": ["^tsconfig\\.json$"],
+            "managerFilePatterns": [
+                "/^tsconfig\\.json$/"
+            ],
             "matchStrings": [
                 "\"extends\":\\s*\"(?<depName>@tsconfig/node(?<major>\\d+))/tsconfig\\.json\""
             ],
@@ -52,5 +54,5 @@
             "currentValueTemplate": "{{{major}}}.\\d.\\d",
             "datasourceTemplate": "npm"
         }
-  ]
+    ]
 }
