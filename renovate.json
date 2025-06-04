@@ -42,14 +42,15 @@
         }
     ],
     "customManagers": [
-    {
-        "customType": "regex",
-      "fileMatch": ["^tsconfig\\.json$"],
-      "matchStrings": [
-        "\"extends\":\\s*\"(?<depName>@tsconfig/node\\d+)/tsconfig\\.json\""
-      ],
-      "depNameTemplate": "{{{depName}}}",
-      "datasourceTemplate": "npm"
-    }
+        {
+            "customType": "regex",
+            "fileMatch": ["^tsconfig\\.json$"],
+            "matchStrings": [
+                "\"extends\":\\s*\"(?<depName>@tsconfig/node(?<major>\\d+))/tsconfig\\.json\""
+            ],
+            "depNameTemplate": "{{{depName}}}",
+            "currentValueTemplate": "{{{major}}}.\\d.\\d",
+            "datasourceTemplate": "npm"
+        }
   ]
 }
