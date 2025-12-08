@@ -3,6 +3,7 @@
     "extends": [
         "config:recommended",
         ":separateMultipleMajorReleases",
-        ":disableRateLimiting"
+        ":disableRateLimiting", 
+        "customManagers:tsconfigNodeVersions"
     ]
 }
